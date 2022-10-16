@@ -1,0 +1,19 @@
+{
+  "name": "immersive-world",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "events": "^3.3.0",
+    "three": "^0.145.0",
+    "vite-plugin-glsl": "^0.5.1"
+  }
+}
