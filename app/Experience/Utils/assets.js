@@ -13,7 +13,7 @@ export default [
                     path: "/models/Landscape_items.glb",
                 },
                 {
-                    name: "breezhome",
+                    name: "breezehome",
                     type: "glbModel",
                     path: "/models/Breezehome.glb",
                 },
