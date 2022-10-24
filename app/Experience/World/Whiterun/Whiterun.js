@@ -1,12 +1,16 @@
 import Landscape from "./Components/Landscape.js";
-import Breezehome from "./Components/Breezehome.js";
 import Items from "./Components/Items.js";
+import Interactions from "./Components/Interactions.js";
+import Buildings from "./Components/Buildings.js";
+import Walls from "./Components/Walls.js";
 
 export default class WhiteRun {
     constructor() {
-        this.breezehome = new Breezehome();
-        this.landscape = new Landscape();
         this.items = new Items();
+        this.landscape = new Landscape();
+        this.interactions = new Interactions();
+        this.buildings = new Buildings();
+        this.walls = new Walls();
     }
 
     resize() {}

@@ -5,7 +5,7 @@ import Experience from "../Experience.js";
 import { Octree } from "three/examples/jsm/math/Octree";
 
 import Whiterun from "./Whiterun/Whiterun.js";
-// import Interior from "./Interior/Interior.js";
+import Interior from "./Interior/Interior.js";
 
 export default class World extends EventEmitter {
     constructor() {
@@ -27,7 +27,7 @@ export default class World extends EventEmitter {
 
     setWorld() {
         this.whiterun = new Whiterun();
-        // this.interior = new Interior();
+        this.interior = new Interior();
     }
 
     update() {}

@@ -16,18 +16,17 @@ export default class Landscape {
     }
 
     init() {
-        this.landscape = this.resources.items.whiterun.landscape.scene;
-        this.landscape_texture =
-            this.resources.items.whiterun.landscape_texture;
+        this.landscape = this.resources.items.whiterun.land.scene;
+        this.land_texture = this.resources.items.whiterun.land_texture;
     }
 
     setMaterials() {
-        this.landscape_texture.flipY = false;
-        this.landscape_texture.encoding = THREE.sRGBEncoding;
+        this.land_texture.flipY = false;
+        this.land_texture.encoding = THREE.sRGBEncoding;
 
         this.landscape.children.find((child) => {
             child.material = new THREE.MeshBasicMaterial({
-                map: this.landscape_texture,
+                map: this.land_texture,
             });
         });
 
@@ -35,7 +34,7 @@ export default class Landscape {
     }
 
     setLandscapeCollider() {
-        const collider = this.landscape.getObjectByName("Landscape_collider");
+        const collider = this.landscape.getObjectByName("collider");
         this.octree.fromGraphNode(collider);
         collider.removeFromParent();
         collider.geometry.dispose();

@@ -3,48 +3,68 @@ export default [
         whiterun: {
             assets: [
                 {
-                    name: "landscape",
+                    name: "land",
                     type: "glbModel",
-                    path: "/models/Landscape_w_collider.glb",
+                    path: "/models/land_w_collider.glb",
                 },
                 {
-                    name: "landscape_items",
+                    name: "items",
                     type: "glbModel",
-                    path: "/models/Landscape_items.glb",
+                    path: "/models/land_items.glb",
                 },
                 {
-                    name: "breezehome",
+                    name: "buildings",
                     type: "glbModel",
-                    path: "/models/Breezehome.glb",
+                    path: "/models/buildings.glb",
                 },
                 {
-                    name: "breezehome_texture",
+                    name: "interactions",
+                    type: "glbModel",
+                    path: "/models/outside_interactions.glb",
+                },
+                {
+                    name: "walls",
+                    type: "glbModel",
+                    path: "/models/walls.glb",
+                },
+                {
+                    name: "buildings_texture",
                     type: "imageTexture",
-                    path: "/textures/breezehome_diffuse.webp",
+                    path: "/textures/buildings.webp",
                 },
                 {
-                    name: "landscape_texture",
+                    name: "items_texture",
                     type: "imageTexture",
-                    path: "/textures/landscape_diffuse.webp",
+                    path: "/textures/items.webp",
+                },
+                {
+                    name: "land_texture",
+                    type: "imageTexture",
+                    path: "/textures/land.webp",
+                },
+                {
+                    name: "walls_texture",
+                    type: "imageTexture",
+                    path: "/textures/walls_baked.webp",
                 },
             ],
         },
-        breezhomeInterior: {
+        castleInterior: {
             assets: [
                 {
-                    name: "breezhome_interior",
+                    name: "castle",
                     type: "glbModel",
-                    path: "/models/Interior_w_collider.glb",
+                    path: "/models/interior_w_collider.glb",
                 },
                 {
-                    name: "breezhome_items",
+                    name: "interactions",
                     type: "glbModel",
-                    path: "/models/Interior_items.glb",
+                    path: "/models/interior_interactions.glb",
                 },
                 {
-                    name: "interior_diffuse",
+                    name: "castle_texture",
                     type: "imageTexture",
-                    path: "/textures/interior_diffuse.webp",
+                    path: "/textures/interior_baked.webp",
                 },
             ],
         },

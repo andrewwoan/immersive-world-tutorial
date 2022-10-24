@@ -12,23 +12,20 @@ export default class Items {
     }
 
     init() {
-        this.landscape_items =
-            this.resources.items.whiterun.landscape_items.scene;
-        // this.landscape_items_texture =
-        //     this.resources.items.whiterun.landscape_items_texture;
+        this.items = this.resources.items.whiterun.items.scene;
+        this.items_texture = this.resources.items.whiterun.items_texture;
     }
 
     setMaterials() {
-        // this.landscape_items_texture.flipY = false;
-        // this.landscape_items_texture.encoding = THREE.sRGBEncoding;
+        this.items_texture.flipY = false;
+        this.items_texture.encoding = THREE.sRGBEncoding;
 
-        this.landscape_items.children.find((child) => {
+        this.items.children.find((child) => {
             child.material = new THREE.MeshBasicMaterial({
-                // map: this.landscape_items_texture,
-                color: 0xff0000,
+                map: this.items_texture,
             });
         });
 
-        this.scene.add(this.landscape_items);
+        this.scene.add(this.items);
     }
 }
