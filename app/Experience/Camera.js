@@ -16,7 +16,7 @@ export default class Camera {
         };
 
         this.setPerspectiveCamera();
-        this.setOrbitControls();
+        // this.setOrbitControls();
     }
 
     setPerspectiveCamera() {
@@ -27,11 +27,7 @@ export default class Camera {
             this.params.far
         );
 
-        this.perspectiveCamera.position.set(
-            -44.79263199940674,
-            2.687559596717866,
-            90.00144759632568
-        );
+        this.perspectiveCamera.position.set(12.64, 1.7, 64.0198);
 
         this.scene.add(this.perspectiveCamera);
     }
@@ -47,6 +43,6 @@ export default class Camera {
     }
 
     update() {
-        this.controls.update();
+        // this.controls.update();
     }
 }

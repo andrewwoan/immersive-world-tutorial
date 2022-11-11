@@ -4,6 +4,8 @@ import Experience from "../Experience.js";
 
 import { Octree } from "three/examples/jsm/math/Octree";
 
+import Player from "./Player/Player.js";
+
 import Whiterun from "./Whiterun/Whiterun.js";
 import Interior from "./Interior/Interior.js";
 
@@ -20,15 +22,22 @@ export default class World extends EventEmitter {
 
         this.resources.determineLoad(this.state.location);
 
+        this.player = null;
+
         this.resources.on("ready", () => {
+            if (this.player === null) {
+                this.player = new Player();
+            }
             this.setWorld();
         });
     }
 
     setWorld() {
         this.whiterun = new Whiterun();
-        this.interior = new Interior();
+        // this.interior = new Interior();
     }
 
-    update() {}
+    update() {
+        if (this.player) this.player.update();
+    }
 }
