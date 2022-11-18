@@ -47,6 +47,18 @@ export default [
                     type: "imageTexture",
                     path: "/textures/walls_baked.webp",
                 },
+                {
+                    name: "skyboxTexture",
+                    type: "cubeTexture",
+                    path: [
+                        "/skybox/front.webp",
+                        "/skybox/back.webp",
+                        "/skybox/top.webp",
+                        "/skybox/bottom.webp",
+                        "/skybox/left.webp",
+                        "/skybox/right.webp",
+                    ],
+                },
             ],
         },
         castleInterior: {

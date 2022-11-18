@@ -3,6 +3,7 @@ import Items from "./Components/Items.js";
 import Interactions from "./Components/Interactions.js";
 import Buildings from "./Components/Buildings.js";
 import Walls from "./Components/Walls.js";
+import Environment from "./Components/Environment.js";
 
 export default class WhiteRun {
     constructor() {
@@ -11,6 +12,7 @@ export default class WhiteRun {
         this.interactions = new Interactions();
         this.buildings = new Buildings();
         this.walls = new Walls();
+        this.environment = new Environment();
     }
 
     resize() {}

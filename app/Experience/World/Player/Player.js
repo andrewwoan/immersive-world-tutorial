@@ -208,7 +208,7 @@ export default class Player {
 
         if (this.player.onFloor) {
             if (this.actions.jump) {
-                this.player.velocity.y = 15;
+                this.player.velocity.y = 100;
             }
         }
 
