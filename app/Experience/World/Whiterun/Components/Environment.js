@@ -7,11 +7,11 @@ export default class Environment {
         this.scene = this.experience.scene;
         this.resources = this.experience.resources;
 
-        this.setSkyBox();
+        this.init();
     }
 
-    setSkyBox() {
-        this.skyboxTexture = this.resources.items.whiterun.skyboxTexture;
+    init() {
+        this.skyboxTexture = this.resources.items.whiterun.skyBoxTexture;
         this.skyboxTexture.encoding = THREE.sRGBEncoding;
         this.scene.background = this.skyboxTexture;
     }
