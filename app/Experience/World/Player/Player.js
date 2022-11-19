@@ -30,6 +30,7 @@ export default class Player {
         };
 
         this.player.raycaster = new THREE.Raycaster();
+        this.player.raycaster.far = 5;
 
         this.player.height = 1.7;
         this.player.position = new THREE.Vector3();
@@ -173,7 +174,7 @@ export default class Player {
         this.player.collider.end.y += this.player.height;
     }
 
-    update() {
+    updateMovement() {
         const speed =
             (this.player.onFloor ? 1.75 : 0.2) *
             this.player.gravity *
@@ -234,5 +235,46 @@ export default class Player {
         if (this.player.body.position.y < -20) {
             this.spawnPlayerOutOfBounds();
         }
+    }
+
+    setInteractionObjects(interactionObjects) {
+        this.player.interactionObjects = interactionObjects;
+    }
+
+    getgetCameraLookAtDirectionalVector() {
+        const direction = new THREE.Vector3(0, 0, -1);
+        return direction.applyQuaternion(
+            this.camera.perspectiveCamera.quaternion
+        );
+    }
+
+    updateRaycaster() {
+        this.player.raycaster.ray.origin.copy(
+            this.camera.perspectiveCamera.position
+        );
+
+        this.player.raycaster.ray.direction.copy(
+            this.getgetCameraLookAtDirectionalVector()
+        );
+
+        const intersects = this.player.raycaster.intersectObjects(
+            this.player.interactionObjects.children
+        );
+
+        if (intersects.length === 0) {
+            this.currentIntersectObject = "";
+        } else {
+            this.currentIntersectObject = intersects[0].object.name;
+        }
+
+        if (this.currentIntersectObject !== this.previousIntersectObject) {
+            this.previousIntersectObject = this.currentIntersectObject;
+            console.log(this.previousIntersectObject);
+        }
+    }
+
+    update() {
+        this.updateMovement();
+        this.updateRaycaster();
     }
 }
