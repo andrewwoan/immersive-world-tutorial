@@ -1,10 +1,13 @@
 import * as THREE from "three";
 import Experience from "../../Experience.js";
 
+import { EventEmitter } from "events";
+
 import { Capsule } from "three/examples/jsm/math/Capsule";
 
-export default class Player {
+export default class Player extends EventEmitter {
     constructor() {
+        super();
         this.experience = new Experience();
         this.time = this.experience.time;
         this.camera = this.experience.camera;
@@ -40,7 +43,7 @@ export default class Player {
         this.player.velocity = new THREE.Vector3();
         this.player.direction = new THREE.Vector3();
 
-        this.player.speedMultiplier = 0.8;
+        this.player.speedMultiplier = 2;
 
         this.player.collider = new Capsule(
             new THREE.Vector3(),
@@ -269,7 +272,7 @@ export default class Player {
 
         if (this.currentIntersectObject !== this.previousIntersectObject) {
             this.previousIntersectObject = this.currentIntersectObject;
-            console.log(this.previousIntersectObject);
+            this.emit("updateMessage", this.previousIntersectObject);
         }
     }
 

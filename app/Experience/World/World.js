@@ -27,6 +27,7 @@ export default class World extends EventEmitter {
         this.resources.on("ready", () => {
             if (this.player === null) {
                 this.player = new Player();
+                this.setPlayerEvents();
             }
             this.setWorld();
         });
@@ -39,6 +40,17 @@ export default class World extends EventEmitter {
         );
 
         // this.interior = new Interior();
+    }
+
+    setPlayerEvents() {
+        // HERE------------------------------
+        this.player.on("updateMessage", (objectName) => {
+            this.emit("updateMessage", objectName);
+        });
+
+        this.player.on("interact", (objectName) => {
+            this.emit("interact", objectName);
+        });
     }
 
     update() {

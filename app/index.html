@@ -12,8 +12,81 @@
       <canvas class="experience-canvas"></canvas>
     </div>
 
-    //Crosshair
-    
+
+    <!-- Sign Content -->
+    <div class="message"></div>
+
+    <!-- Crosshair -->
+    <div class="crosshair hidden">
+      <svg class="top" width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <mask id="path-1-outside-1_1_6" maskUnits="userSpaceOnUse" x="0.333336" y="0" width="12" height="15" fill="black">
+        <rect fill="white" x="0.333336" width="12" height="15"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.58796 11.8333L6.08611 1L3.58426 11.8333L2.33333 13.6389H9.83889L8.58796 11.8333Z"/>
+        </mask>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.58796 11.8333L6.08611 1L3.58426 11.8333L2.33333 13.6389H9.83889L8.58796 11.8333Z" fill="url(#paint0_linear_1_6)" fill-opacity="0.8"/>
+        <path d="M6.08611 1L7.06047 0.774982H5.11176L6.08611 1ZM8.58796 11.8333L7.61361 12.0584L7.65676 12.2452L7.76597 12.4028L8.58796 11.8333ZM3.58426 11.8333L4.40626 12.4028L4.51547 12.2452L4.55862 12.0584L3.58426 11.8333ZM2.33334 13.6389L1.51134 13.0694L0.423963 14.6389H2.33334V13.6389ZM9.83889 13.6389V14.6389H11.7483L10.6609 13.0694L9.83889 13.6389ZM5.11176 1.22502L7.61361 12.0584L9.56232 11.6083L7.06047 0.774982L5.11176 1.22502ZM4.55862 12.0584L7.06047 1.22502L5.11176 0.774982L2.60991 11.6083L4.55862 12.0584ZM3.15533 14.2084L4.40626 12.4028L2.76227 11.2638L1.51134 13.0694L3.15533 14.2084ZM9.83889 12.6389H2.33334V14.6389H9.83889V12.6389ZM7.76597 12.4028L9.01689 14.2084L10.6609 13.0694L9.40996 11.2638L7.76597 12.4028Z" fill="black" mask="url(#path-1-outside-1_1_6)"/>
+        <defs>
+        <linearGradient id="paint0_linear_1_6" x1="6.08611" y1="1" x2="6.08611" y2="13.6389" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#DADADA"/>
+        <stop offset="1" stop-color="#C7C7C7"/>
+        </linearGradient>
+        </defs>
+      </svg>
+
+      <div class="middle">
+        <svg class="left" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="path-1-outside-1_1_8" maskUnits="userSpaceOnUse" x="0" y="0.111111" width="15" height="12" fill="black">
+          <rect fill="white" y="0.111111" width="15" height="12"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8333 3.85649L1 6.35834L11.8333 8.86019L13.6389 10.1111V2.60556L11.8333 3.85649Z"/>
+          </mask>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8333 3.85649L1 6.35834L11.8333 8.86019L13.6389 10.1111V2.60556L11.8333 3.85649Z" fill="url(#paint0_linear_1_8)" fill-opacity="0.8"/>
+          <path d="M1 6.35833L0.774982 5.38398L0.774982 7.33269L1 6.35833ZM11.8333 3.85648L12.0584 4.83084L12.2452 4.78769L12.4028 4.67848L11.8333 3.85648ZM11.8333 8.86019L12.4028 8.03819L12.2452 7.92898L12.0584 7.88583L11.8333 8.86019ZM13.6389 10.1111L13.0694 10.9331L14.6389 12.0205V10.1111H13.6389ZM13.6389 2.60556H14.6389V0.696185L13.0694 1.78356L13.6389 2.60556ZM1.22502 7.33269L12.0584 4.83084L11.6083 2.88213L0.774982 5.38398L1.22502 7.33269ZM12.0584 7.88583L1.22502 5.38398L0.774982 7.33269L11.6083 9.83454L12.0584 7.88583ZM14.2084 9.28912L12.4028 8.03819L11.2638 9.68218L13.0694 10.9331L14.2084 9.28912ZM12.6389 2.60556V10.1111H14.6389V2.60556H12.6389ZM12.4028 4.67848L14.2084 3.42755L13.0694 1.78356L11.2638 3.03449L12.4028 4.67848Z" fill="black" mask="url(#path-1-outside-1_1_8)"/>
+          <defs>
+          <linearGradient id="paint0_linear_1_8" x1="1" y1="6.35833" x2="13.6389" y2="6.35833" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#DADADA"/>
+          <stop offset="1" stop-color="#C7C7C7"/>
+          </linearGradient>
+          </defs>
+        </svg>
+
+        <svg class="right" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="path-1-outside-1_1_16" maskUnits="userSpaceOnUse" x="0.527779" y="0.888885" width="15" height="12" fill="black">
+          <rect fill="white" x="0.527779" y="0.888885" width="15" height="12"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.69445 9.14351L14.5278 6.64166L3.69445 4.13981L1.88889 2.88889V10.3944L3.69445 9.14351Z"/>
+          </mask>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.69445 9.14351L14.5278 6.64166L3.69445 4.13981L1.88889 2.88889V10.3944L3.69445 9.14351Z" fill="url(#paint0_linear_1_16)" fill-opacity="0.8"/>
+          <path d="M14.5278 6.64166L14.7528 7.61602L14.7528 5.66731L14.5278 6.64166ZM3.69445 9.14351L3.46943 8.16916L3.28258 8.21231L3.12495 8.32152L3.69445 9.14351ZM3.69445 4.13981L3.12495 4.96181L3.28258 5.07101L3.46943 5.11416L3.69445 4.13981ZM1.88889 2.88889L2.45838 2.06689L0.888887 0.979516V2.88889H1.88889ZM1.88889 10.3944H0.888887V12.3038L2.45838 11.2164L1.88889 10.3944ZM14.3028 5.66731L3.46943 8.16916L3.91946 10.1179L14.7528 7.61602L14.3028 5.66731ZM3.46943 5.11416L14.3028 7.61602L14.7528 5.66731L3.91946 3.16545L3.46943 5.11416ZM1.31939 3.71088L3.12495 4.96181L4.26394 3.31781L2.45838 2.06689L1.31939 3.71088ZM2.88889 10.3944V2.88889H0.888887V10.3944H2.88889ZM3.12495 8.32152L1.31939 9.57244L2.45838 11.2164L4.26394 9.96551L3.12495 8.32152Z" fill="black" mask="url(#path-1-outside-1_1_16)"/>
+          <defs>
+          <linearGradient id="paint0_linear_1_16" x1="14.5278" y1="6.64166" x2="1.88889" y2="6.64166" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#DADADA"/>
+          <stop offset="1" stop-color="#C7C7C7"/>
+          </linearGradient>
+          </defs>
+        </svg>
+      </div>
+  
+      <svg class="bottom" width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <mask id="path-1-outside-1_1_12" maskUnits="userSpaceOnUse" x="-0.161114" y="0" width="12" height="15" fill="black">
+        <rect fill="white" x="-0.161114" width="12" height="15"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.58426 3.16667L6.08611 14L8.58796 3.16667L9.83889 1.36111L2.33333 1.36111L3.58426 3.16667Z"/>
+        </mask>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.58426 3.16667L6.08611 14L8.58796 3.16667L9.83889 1.36111L2.33333 1.36111L3.58426 3.16667Z" fill="url(#paint0_linear_1_12)" fill-opacity="0.8"/>
+        <path d="M6.08611 14L5.11176 14.225H7.06047L6.08611 14ZM3.58426 3.16667L4.55862 2.94165L4.51546 2.7548L4.40626 2.59717L3.58426 3.16667ZM8.58796 3.16667L7.76597 2.59717L7.65676 2.7548L7.61361 2.94165L8.58796 3.16667ZM9.83889 1.36111L10.6609 1.9306L11.7483 0.361107H9.83889V1.36111ZM2.33333 1.36111V0.361107H0.423961L1.51134 1.9306L2.33333 1.36111ZM7.06047 13.775L4.55862 2.94165L2.60991 3.39168L5.11176 14.225L7.06047 13.775ZM7.61361 2.94165L5.11176 13.775L7.06047 14.225L9.56232 3.39168L7.61361 2.94165ZM9.01689 0.791613L7.76597 2.59717L9.40996 3.73616L10.6609 1.9306L9.01689 0.791613ZM2.33333 2.36111L9.83889 2.36111V0.361107L2.33333 0.361107V2.36111ZM4.40626 2.59717L3.15533 0.791612L1.51134 1.9306L2.76227 3.73616L4.40626 2.59717Z" fill="black" mask="url(#path-1-outside-1_1_12)"/>
+        <defs>
+        <linearGradient id="paint0_linear_1_12" x1="6.08611" y1="14" x2="6.08611" y2="1.36111" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#DADADA"/>
+        <stop offset="1" stop-color="#C7C7C7"/>
+        </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+
+          
+        
+        
+      
+      
     
     <script type="module" src="/main.js"></script>
   </body>
