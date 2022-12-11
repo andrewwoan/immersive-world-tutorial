@@ -43,7 +43,7 @@ export default class Player extends EventEmitter {
         this.player.velocity = new THREE.Vector3();
         this.player.direction = new THREE.Vector3();
 
-        this.player.speedMultiplier = 2;
+        this.player.speedMultiplier = 1.5;
 
         this.player.collider = new Capsule(
             new THREE.Vector3(),
@@ -212,7 +212,7 @@ export default class Player extends EventEmitter {
 
         if (this.player.onFloor) {
             if (this.actions.jump) {
-                this.player.velocity.y = 100;
+                this.player.velocity.y = 15;
             }
         }
 
