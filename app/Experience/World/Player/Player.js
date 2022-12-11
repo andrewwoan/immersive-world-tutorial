@@ -212,7 +212,7 @@ export default class Player extends EventEmitter {
 
         if (this.player.onFloor) {
             if (this.actions.jump) {
-                this.player.velocity.y = 15;
+                this.player.velocity.y = 30;
             }
         }
 
